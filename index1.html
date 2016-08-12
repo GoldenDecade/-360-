@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <!--<link rel="stylesheet" href="css/jquery.fullPage.css"/>-->
+    <link rel="stylesheet" href="css/main.css"/>
+</head>
+<script src="js/jquery-1.8.3.min.js"></script>
+<script src="js/jquery.fullPage.min.js"></script>
+<body>
+
+<div id="dowebok">
+    <div class="section first">
+        <div class="logo"></div>
+        <div class="text">
+            <img src="images/text_1.png" alt=""/>
+            <img src="images/text_2.png" alt=""/>
+            <img src="images/text_3.png" alt=""/>
+            <img src="images/text_4.png" alt=""/>
+            <img src="images/text_5.png" alt=""/>
+            <img src="images/text_6.png" alt=""/>
+            <img src="images/text_7.png" alt=""/>
+            <img src="images/text_8.png" alt=""/>
+        </div>
+        <div class="property"></div>
+    </div>
+    <div class="section second">
+        <div class="left">
+            <img src="images/shield_1.png" alt="1"/>
+            <img src="images/shield_2.png" alt="2"/>
+            <img src="images/shield_3.png" alt="3"/>
+            <img src="images/shield_4.png" alt="4"/>
+            <img src="images/shield_5.png" alt="5"/>
+            <img src="images/shield_6.png" alt="6"/>
+            <img src="images/shield_7.png" alt="7"/>
+            <img src="images/shield_8.png" alt="8"/>
+            <img src="images/shield_9.png" alt="9"/>
+        </div>
+        <div class="right">
+            <img src="images/info_2.png" alt="info2"/>
+        </div>
+    </div>
+    <div class="section third">
+        <div class="info">
+            <img src="images/info_3.png" alt="info3"/>
+        </div>
+        <div class="rocket">
+            <img src="images/rocket.png" alt="rocket"/>
+        </div>
+        <div class="circle">
+            <img src="images/circle.png" alt="circle"/>
+        </div>
+    </div>
+    <div class="section fourth">
+        <div class="left">
+            <div class="search">
+                <img src="images/search.png" alt="search"/>
+                <div class="key">
+                    <img src="images/key.png" alt="key"/>
+                </div>
+                <div class="keywrap">
+                </div>
+            </div>
+            <div class="movie">
+                <img src="images/result.png" alt="result"/>
+            </div>
+        </div>
+        <div class="right">
+            <img src="images/info_4.png" alt="info4"/>
+        </div>
+    </div>
+    <div class="section fifth">
+
+        <div class="top">
+            <img src="images/info_5.png" alt="info5"/>
+        </div>
+        <div class="browser">
+
+            <div class="bordertop"></div>
+            <div class="borderleft"></div>
+            <div class="borderright"></div>
+            <div class="borderbottom"></div>
+
+            <div class="toolbar">
+                <div class="bd"></div>
+                <img src="images/toolbar.png" alt="toolbar"/>
+            </div>
+
+            <div class="extra">
+                <img src="images/extra.png" alt="extra"/>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(function(){
+        $('#dowebok').fullpage({
+            sectionsColor: ['#0da5d6', '#2ab561', '#de8910', '#16ba9d','#0da5d6'],
+            afterLoad: function(anchorLink, index){
+                console.log(index);
+                $('.section').removeClass('current');
+                //延时100毫秒执行
+                setTimeout(function(){
+                    console.log(55);
+                    $('.section').eq(index-1).addClass('current');},300);
+            }
+
+        })
+    });
+
+
+
+</script>
+
+</body>
+</html>
